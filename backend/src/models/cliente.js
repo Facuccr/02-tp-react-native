@@ -14,10 +14,15 @@ export const Cliente = sequelize.define("Cliente", {
     type: DataTypes.STRING,
     defaultValue: "pendiente",
   },
-  personajeAsignado: {
+
+  imagen: {
     type: DataTypes.STRING,
   },
-  imagen: {
+  direccion: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  trabajador: {
     type: DataTypes.STRING,
   },
 });
