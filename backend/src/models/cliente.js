@@ -1,7 +1,7 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../config/db.js");
+import { DataTypes } from "sequelize";
+import sequelize from "../config/db.js";
 
-const Cliente = sequelize.define("Cliente", {
+export const Cliente = sequelize.define("Cliente", {
   nombre: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -21,5 +21,3 @@ const Cliente = sequelize.define("Cliente", {
     type: DataTypes.STRING,
   },
 });
-
-module.exports = Cliente;
