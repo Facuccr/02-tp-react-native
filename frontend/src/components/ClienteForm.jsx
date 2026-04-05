@@ -35,7 +35,7 @@ export default function ClienteForm({
         onSubmit={handleSubmit}
         className="bg-slate-900 border border-slate-800 p-8 rounded-3xl w-full max-w-md shadow-2xl space-y-6 transform animate-in zoom-in-95 duration-200"
       >
-        {/* HEADER */}
+        {/* header */}
         <div className="text-center mb-2">
           <h2 className="text-3xl font-black text-white tracking-tight">
             {cliente ? "Editar Registro" : "Nuevo Cliente"}
@@ -44,7 +44,7 @@ export default function ClienteForm({
         </div>
 
         <div className="space-y-4">
-          {/* INPUTS ESTILIZADOS */}
+          {/* INPUTS*/}
           <div>
             <label className="block text-xs font-bold text-slate-500 uppercase mb-1 ml-1">
               Nombre del Cliente
@@ -84,9 +84,9 @@ export default function ClienteForm({
                 value={form.estado}
                 onChange={handleChange}
               >
-                <option value="pendiente">⏳ Pendiente</option>
-                <option value="en_proceso">⚙️ En proceso</option>
-                <option value="resuelto">✅ Resuelto</option>
+                <option value="pendiente"> Pendiente</option>
+                <option value="en_proceso"> En proceso</option>
+                <option value="resuelto"> Resuelto</option>
               </select>
             </div>
             <div>
@@ -103,7 +103,7 @@ export default function ClienteForm({
             </div>
           </div>
 
-          {/* SELECCIÓN DE TRABAJADOR */}
+          {/* asignacion de trabajadores */}
           <div className="pt-2">
             <label className="block text-xs font-bold text-slate-500 uppercase mb-3 ml-1 text-center">
               Asignar Especialista de Smiling Friends
@@ -142,7 +142,7 @@ export default function ClienteForm({
           </div>
         </div>
 
-        {/* BOTONES DE ACCIÓN */}
+        {/*botones de accion */}
         <div className="flex gap-3 pt-4">
           <button
             type="button"

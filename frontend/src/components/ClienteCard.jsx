@@ -17,7 +17,7 @@ export default function ClienteCard({ data, onDelete, onResolve, onEdit }) {
           key={c.id}
           className="group relative bg-slate-900/40 backdrop-blur-md border border-slate-800 rounded-2xl p-5 shadow-xl hover:border-slate-700 transition-all duration-300 hover:-translate-y-1"
         >
-          {/* HEADER: Info & Avatar */}
+          {/* header */}
           <div className="flex justify-between items-start mb-4">
             <div className="space-y-1">
               <h2 className="font-bold text-xl text-white group-hover:text-blue-400 transition-colors">
@@ -40,14 +40,14 @@ export default function ClienteCard({ data, onDelete, onResolve, onEdit }) {
             )}
           </div>
 
-          {/* PROBLEMA AREA */}
+          {/* area del problema*/}
           <div className="bg-slate-950/50 rounded-xl p-3 mb-4 border border-slate-800/50">
             <p className="text-slate-300 text-sm leading-relaxed italic">
               "{c.problema}"
             </p>
           </div>
 
-          {/* ESTADO & ACCIONES */}
+          {/* estado*/}
           <div className="flex items-center justify-between mt-auto pt-2">
             <span
               className={`px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-bold border ${getStatusStyles(
@@ -58,7 +58,7 @@ export default function ClienteCard({ data, onDelete, onResolve, onEdit }) {
             </span>
 
             <div className="flex gap-2">
-              {/* Botón Resolver */}
+              {/* boton "resolver"*/}
               <button
                 onClick={() => onResolve(c.id)}
                 title="Resolver caso"
@@ -67,7 +67,7 @@ export default function ClienteCard({ data, onDelete, onResolve, onEdit }) {
                 ✓
               </button>
 
-              {/* Botón Editar */}
+              {/* boton para editar */}
               <button
                 onClick={() => onEdit(c)}
                 title="Editar"
@@ -76,7 +76,7 @@ export default function ClienteCard({ data, onDelete, onResolve, onEdit }) {
                 ✎
               </button>
 
-              {/* Botón Eliminar */}
+              {/* boton para eliminar*/}
               <button
                 onClick={() => onDelete(c.id)}
                 title="Eliminar"
